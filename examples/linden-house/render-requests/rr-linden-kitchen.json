@@ -1,0 +1,65 @@
+{
+ "schema": "render-request/v1",
+ "id": "rr-linden-kitchen",
+ "created": "2026-09-29T23:31:41.630Z",
+ "property": "Linden House",
+ "model_hash": "276cbff37a4d",
+ "view": {
+  "mode": "eye",
+  "level": "L1",
+  "room": "Kitchen",
+  "design_layer": "Base design",
+  "lighting": "evening",
+  "camera": {
+   "version": 1,
+   "model": "276cbff37a4d",
+   "mode": "eye",
+   "level": "L1",
+   "room": "kitchen",
+   "finish": "source",
+   "roof": false,
+   "ceiling": true,
+   "cut": true,
+   "labels": true,
+   "furniture": true,
+   "siteVisible": false,
+   "layer": "base",
+   "night": false,
+   "light": "evening",
+   "paint": {
+    "exterior": null,
+    "roof": null,
+    "rooms": {}
+   },
+   "target": [
+    6.553,
+    7.163,
+    1
+   ],
+   "radius": 9.076007249886924,
+   "theta": -2.0106192982974678,
+   "phi": 0.95,
+   "position": [
+    8.3392,
+    8.644,
+    1.45
+   ],
+   "yaw": -2.436927528314667,
+   "pitch": -0.1
+  }
+ },
+ "finishes": [
+  {
+   "room": "Kitchen",
+   "floor": "Porcelain tile 12x24 (TL-1, #dcd8cf)",
+   "walls": "Interior paint, eggshell (PT-1, #f1eee7)"
+  }
+ ],
+ "view_kind": "interior",
+ "exterior": {
+  "walls": "Smooth stucco, warm white (ST-1, #ebe6dc)",
+  "roof": "Standing-seam metal roof, 18\" o.c. (MR-1, #4b5157)"
+ },
+ "reference_image": "rr-linden-kitchen-reference.png",
+ "instructions": "Follow prompts/08_RENDER_VIEW.txt."
+}

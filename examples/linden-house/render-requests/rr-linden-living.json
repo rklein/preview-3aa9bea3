@@ -1,0 +1,65 @@
+{
+ "schema": "render-request/v1",
+ "id": "rr-linden-living",
+ "created": "2026-09-29T23:31:19.562Z",
+ "property": "Linden House",
+ "model_hash": "276cbff37a4d",
+ "view": {
+  "mode": "eye",
+  "level": "L1",
+  "room": "Living",
+  "design_layer": "Base design",
+  "lighting": "day",
+  "camera": {
+   "version": 1,
+   "model": "276cbff37a4d",
+   "mode": "eye",
+   "level": "L1",
+   "room": "living",
+   "finish": "source",
+   "roof": false,
+   "ceiling": true,
+   "cut": true,
+   "labels": true,
+   "furniture": true,
+   "siteVisible": false,
+   "layer": "base",
+   "night": false,
+   "light": "day",
+   "paint": {
+    "exterior": null,
+    "roof": null,
+    "rooms": {}
+   },
+   "target": [
+    6.553,
+    2.591,
+    1
+   ],
+   "radius": 10.366287810011837,
+   "theta": -2.0106192982974678,
+   "phi": 0.95,
+   "position": [
+    4.7672,
+    0.5,
+    1.45
+   ],
+   "yaw": 0.8549258314260938,
+   "pitch": -0.1
+  }
+ },
+ "finishes": [
+  {
+   "room": "Living",
+   "floor": "White oak plank, 7\" (WD-1, #c9a67a)",
+   "walls": "Interior paint, eggshell (PT-1, #f1eee7)"
+  }
+ ],
+ "view_kind": "interior",
+ "exterior": {
+  "walls": "Smooth stucco, warm white (ST-1, #ebe6dc)",
+  "roof": "Standing-seam metal roof, 18\" o.c. (MR-1, #4b5157)"
+ },
+ "reference_image": "rr-linden-living-reference.png",
+ "instructions": "Follow prompts/08_RENDER_VIEW.txt."
+}

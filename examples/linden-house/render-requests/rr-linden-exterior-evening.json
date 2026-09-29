@@ -1,0 +1,59 @@
+{
+ "schema": "render-request/v1",
+ "id": "rr-linden-exterior-evening",
+ "created": "2026-09-29T23:30:22.438Z",
+ "property": "Linden House",
+ "model_hash": "276cbff37a4d",
+ "view": {
+  "mode": "orbit",
+  "level": "all",
+  "room": null,
+  "design_layer": "Base design",
+  "lighting": "evening",
+  "camera": {
+   "version": 1,
+   "model": "276cbff37a4d",
+   "mode": "orbit",
+   "level": "all",
+   "room": "",
+   "finish": "source",
+   "roof": true,
+   "ceiling": true,
+   "cut": false,
+   "labels": false,
+   "furniture": true,
+   "siteVisible": false,
+   "layer": "base",
+   "night": false,
+   "light": "evening",
+   "paint": {
+    "exterior": null,
+    "roof": null,
+    "rooms": {}
+   },
+   "target": [
+    3.4278,
+    6.375800000000001,
+    3.8530999999999995
+   ],
+   "radius": 26,
+   "theta": -1.25,
+   "phi": 1.18,
+   "position": [
+    11.008072755051518,
+    -16.4375590032117,
+    13.757145433538927
+   ],
+   "yaw": 1.5707963267948966,
+   "pitch": 0
+  }
+ },
+ "finishes": [],
+ "view_kind": "exterior",
+ "exterior": {
+  "walls": "Smooth stucco, warm white (ST-1, #ebe6dc)",
+  "roof": "Standing-seam metal roof, 18\" o.c. (MR-1, #4b5157)"
+ },
+ "reference_image": "rr-linden-exterior-evening-reference.png",
+ "instructions": "Follow prompts/08_RENDER_VIEW.txt."
+}
