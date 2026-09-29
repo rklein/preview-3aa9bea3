@@ -37,6 +37,7 @@ label{display:block;font-size:13px;margin:10px 0 4px;color:var(--muted)}
 #actbar>button,#actbar summary{box-shadow:var(--shadow)}
 #nightbtn{min-width:40px;font-size:17px;padding:6px 9px}
 @media(max-width:1480px){#titlecard p,#titlecard #badge{display:none}#topbar{gap:6px}#actbar{gap:6px}}
+@media(max-width:1100px) and (min-width:701px){#titlecard{display:none!important}#plans-btn,#render-btn{display:none}#plans-more,#render-more{display:block}#topbar .spacer{display:none}}
 @media(max-width:1280px) and (min-width:701px){#actbar>button,#actbar summary,.seg button,#topbar select{padding:7px 9px;font-size:14px}}
 #study-btn{background:var(--blue);color:#fff;border-color:var(--blue)}
 .cta{display:inline-block;background:#134d38;color:#fff;border-radius:7px;padding:8px 12px;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
@@ -433,7 +434,7 @@ document.addEventListener('pointerdown',e=>{if($('more').open&&!$('more').contai
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenus();$('studies').hidden=true}});
 // Design Inspo: base + DATA.design_layers. − hides a layer on this device (restorable); + creates a design-layer request.
 const LAYERS=DATA.design_layers||[],HID='kitInspoHidden:'+DATA.model_hash,PEND='kitInspoPending:'+DATA.model_hash;
-function inspoLabel(){const L=(DATA.design_layers||[]).find(l=>l.id===layer);const ph=matchMedia('(max-width:700px)').matches;$('inspo-btn').textContent=L?(ph?'':'Inspo · ')+L.name+' ▾':(ph?'Inspo ▾':'Design Inspo ▾');$('inspo-btn').classList.toggle('on',!!L)}
+function inspoLabel(){const L=(DATA.design_layers||[]).find(l=>l.id===layer);const ph=matchMedia('(max-width:1100px)').matches;$('inspo-btn').textContent=L?(ph?'':'Inspo · ')+L.name+' ▾':(ph?'Inspo ▾':'Design Inspo ▾');$('inspo-btn').classList.toggle('on',!!L)}
 function setLayer(id){layer=id;inspoLabel();visibility();$('status').textContent=id==='base'?'Showing the base design.':'Showing design layer: '+LAYERS.find(l=>l.id===id).name+'.'}
 function lrow(who,what,on,onpick,onrm,rmTitle){const r=document.createElement('div');r.className='lrow'+(on?' on':'');const p=document.createElement('button');p.type='button';p.className='pick';const a=document.createElement('span');a.className='who';a.textContent=who;const b=document.createElement('span');b.className='what';b.textContent=what||'';p.append(a,b);if(onpick)p.onclick=onpick;r.append(p);if(onrm){const x=document.createElement('button');x.type='button';x.className='rm';x.textContent='−';x.title=rmTitle;x.setAttribute('aria-label',rmTitle);x.onclick=onrm;r.append(x)}return r}
 function renderInspo(){const hid=store.get(HID,[]),list=$('ip-list');list.replaceChildren();
