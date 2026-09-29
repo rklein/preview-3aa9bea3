@@ -71,6 +71,11 @@ h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.03em;line-height:1.08;margin:
 .study:hover{transform:translateY(-2px);box-shadow:0 12px 30px #1d2a3118}
 .study img{aspect-ratio:11/8.5;object-fit:cover;border-bottom:1px solid var(--line)}
 .study div{padding:12px 14px}.study b{display:block;font-size:15px;line-height:1.3}.study span{color:var(--faint);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+/* paint + who */
+.swdemo{display:flex;gap:6px;margin-top:16px}.swdemo i{width:24px;height:24px;border-radius:50%;box-shadow:0 0 0 1px #0001}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.who div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.who b{display:block;font-size:19px;margin-bottom:4px}.who span{color:var(--muted);font-size:16px}.whonote{color:var(--muted);margin-top:18px}
+@media(max-width:900px){.who{grid-template-columns:1fr}}
 /* price */
 .price{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:var(--shadow);text-align:left}
 .price .amt{font-size:56px;font-weight:760;letter-spacing:-.03em;line-height:1}.price .amt small{font-size:17px;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:6px}
@@ -87,13 +92,13 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
 @media(max-width:520px){.proof{grid-template-columns:1fr}.ba{aspect-ratio:4/3.4}.studies{grid-template-columns:1fr 1fr}}
 </style></head><body>
 <nav id="nav"><div class="wrap"><a class="logo" href="#"><i>⌂</i>Casa Study</a>
- <div class="links"><a href="#how">How it works</a><a href="#styles">Styles</a><a href="#exact">Accuracy</a><a href="#studies">Studies</a><a href="#faq">FAQ</a></div>
+ <div class="links"><a href="#how">How it works</a><a href="#styles">Styles</a><a href="#paint">Paint</a><a href="#exact">Accuracy</a><a href="#studies">Studies</a><a href="#faq">FAQ</a></div>
  <a class="btn primary small-btn" href="#buy">Get it · $5</a></div></nav>
 
 <header class="hero"><div class="wrap">
  <span class="eyebrow">For anyone building or remodeling a home</span>
  <h1>Your house plans, as a 3D home you can redesign.</h1>
- <p class="lede">Drop in your architect's PDFs. Your AI assistant builds an exact 3D model, lets you try any designer's style on your real floor plan, and answers questions about light, layout and cost, with sources.</p>
+ <p class="lede">Drop in your architect's PDFs. Your AI assistant builds an exact 3D model. Then repaint it, restyle it, try an addition, and ask real questions about light, layout and cost, with sources.</p>
  <div class="cta-row"><a class="btn primary" href="#buy">Get it for $5</a><a class="btn ghost" href="./demo/">Try the sample tour →</a></div>
  <p class="micro">One-time purchase · No subscription · Your plans never leave your computer</p>
 
@@ -132,6 +137,26 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
  <p class="note">Interpretations inspired by each designer, made by an AI assistant. Not affiliated with or endorsed by them.</p>
 </div></section>
 
+<section id="paint"><div class="wrap">
+ <h2>Paint it. Reshape it.</h2><p class="sub">Try the choices you are actually about to make, on the house you are actually building.</p>
+ <div class="steps">
+  <div class="step"><h3>Every surface, your colors</h3><p>Stucco, roof, and each room's floors, walls and cabinets. Tap a room, pick a swatch or any custom color, and save schemes to compare. Share the exact look as one file.</p>
+   <div class="swdemo"><i style="background:#f2efe8"></i><i style="background:#d9c9ab"></i><i style="background:#a9b39c"></i><i style="background:#4a4f53"></i><i style="background:#b8704f"></i><i style="background:#b98a55"></i><i style="background:#6b4a33"></i><i style="background:#c7d3dc"></i></div></div>
+  <div class="step"><h3>Imagine the next version</h3><p>An addition off the back, a second story, an ADU over the garage, the kitchen opened to the living room. Describe it and your assistant models it as a layer you can flip against the house as drawn.</p></div>
+  <div class="step"><h3>Decide with the whole picture</h3><p>Walk through each option at eye level, day and night, then ask for a study: will the new room get enough light, does the island still clear, what does it change?</p></div>
+ </div>
+</div></section>
+
+<section id="who"><div class="wrap">
+ <h2>Who it's for</h2><p class="sub">Anyone with a set of plans and decisions to make.</p>
+ <div class="who">
+  <div><b>New builds</b><span>See the house before the foundation is poured, and settle finishes early.</span></div>
+  <div><b>Remodels</b><span>Compare the house you have with the one you are planning, room by room.</span></div>
+  <div><b>Additions</b><span>Try the extra room, the second story or the ADU before you commit to drawings.</span></div>
+ </div>
+ <p class="whonote">For homeowners, and for architects and designers who want to hand clients a model they can explore on their own.</p>
+</div></section>
+
 <section id="exact"><div class="wrap exact">
  <div>
   <h2>Measured, not guessed.</h2><p class="sub" style="margin-bottom:22px">A pretty model with invented dimensions is worse than none. The kit makes the assistant prove every number, and the build refuses work that doesn't add up.</p>
@@ -157,7 +182,8 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
   <ul>
    <li>The 3D viewer: dollhouse, walk-through, plan view, day and night</li>
    <li>The model builder with measurement checks and red-team step</li>
-   <li>Design Inspo layers: add and remove any style</li>
+   <li>Design Inspo layers: styles, additions and new layouts</li>
+   <li>Paint: outside, roof, and every room's floors, walls and cabinets</li>
    <li>Study requests and report templates</li>
    <li>Five sample studies from a real remodel</li>
    <li>A shareable single-file tour for your architect, contractor or family</li>
@@ -174,6 +200,7 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
   <details><summary>How long does the first build take?</summary><p>Longer than you might expect: often a few hours of assistant time for a full drawing set. It reads every page, transcribes each dimension, checks that they add up, then red-teams the result. After that, changes and new layers are quick.</p></details>
   <details><summary>Where do my documents go?</summary><p>Nowhere. Plans, photos, insurance papers and surveys stay in the folder on your computer. This site never sees them, and the tour works offline.</p></details>
   <details><summary>How accurate is it?</summary><p>As accurate as your drawings. Every dimension must trace to a printed number, and anything that doesn't is labeled as assumed. It is a visualization and planning tool, not a construction document; your architect's drawings still govern.</p></details>
+  <details><summary>Can I change the layout or add on?</summary><p>Yes. Describe the change (an addition, a moved wall, a second story) and your assistant builds it as a design layer, so you can switch between it and the house as drawn. You don't drag walls in the browser; the assistant models the change and checks it.</p></details>
   <details><summary>Are the studies professional advice?</summary><p>No. They are researched, cited write-ups to help you think and ask better questions of your architect, engineer or contractor.</p></details>
   <details><summary>What if my plans are scans?</summary><p>That works. Scanned and CAD-drawn sheets are read from sharp close-ups, and each number is tied to the image it came from so you can check it.</p></details>
  </div>
