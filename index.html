@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Casa Study · Your house plans, as a 3D home you can redesign</title>
-<meta name="description" content="Turn your architect's PDFs into an exact 3D model. Try any style on your real floor plan, and ask cited questions about lighting, layout and cost. $19 once.">
+<meta name="description" content="Turn your architect's PDFs into an exact 3D model. Try any style on your real floor plan, and ask cited questions about lighting, layout and cost. Priced per house, from $495.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Manrope:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
 <meta property="og:title" content="Casa Study"><meta property="og:description" content="Your house plans, as a 3D home you can redesign."><meta property="og:image" content="./assets/og.jpg">
 <style>
@@ -81,6 +81,16 @@ h2{font-family:"Bricolage Grotesque",Manrope,sans-serif;font-size:clamp(30px,4vw
 .who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.who div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
 .who b{display:block;font-size:19px;margin-bottom:4px}.who span{color:var(--muted);font-size:16px}.whonote{color:var(--muted);margin-top:18px}
 @media(max-width:900px){.who{grid-template-columns:1fr}}
+
+/* tiers (10/1: per-house pricing) */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;text-align:left;margin-top:8px}
+.tier{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.tier.pop{border:2px solid var(--accent)}.tier .badge{position:absolute;top:-12px;left:24px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:4px 12px}
+.tier .amt{font-family:"Bricolage Grotesque",Manrope,sans-serif;font-size:40px;font-weight:760;letter-spacing:-.03em;line-height:1;margin:6px 0 4px}.tier .amt small{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:6px}
+.tier ul{padding:0;list-style:none;margin:16px 0 22px;flex:1}.tier li{padding:6px 0 6px 26px;position:relative;color:#2c3a41;font-size:15px}.tier li:before{content:"✓";position:absolute;left:2px;color:var(--accent);font-weight:700}
+.tier form,.tier .btn{width:100%}.tier .btn{justify-content:center;padding:14px}
+#buy .fine{max-width:680px;margin:14px auto 0}
+@media(max-width:900px){.tiers{grid-template-columns:1fr}}
 /* price */
 .price{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:var(--shadow);text-align:left}
 .price .amt{font-size:56px;font-weight:760;letter-spacing:-.03em;line-height:1}.price .amt small{font-size:17px;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:6px}
@@ -99,14 +109,14 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
 </style></head><body>
 <nav id="nav"><div class="wrap"><a class="logo" href="#"><i>⌂</i>Casa Study</a>
  <div class="links"><a href="#how">How it works</a><a href="#styles">Styles</a><a href="#paint">Paint</a><a href="#exact">Accuracy</a><a href="#studies">Studies</a><a href="#faq">FAQ</a></div>
- <a class="btn primary small-btn" href="#buy">Get it · $19</a></div></nav>
+ <a class="btn primary small-btn" href="#buy">See pricing</a></div></nav>
 
 <header class="hero"><div class="wrap">
  <span class="eyebrow">For anyone building or remodeling a home</span>
  <h1>Your house plans, as a 3D home you can redesign.</h1>
- <p class="lede">Drop in your architect's PDFs. Your AI assistant builds an exact 3D model. Then repaint it, restyle it, try an addition, and ask real questions about light, layout and cost, with sources.</p>
- <div class="cta-row"><a class="btn primary" href="#buy">Get it for $19</a><a class="btn ghost" href="./demo/">Try the sample tour →</a></div>
- <p class="micro">One-time purchase · No subscription · Your plans never leave your computer</p>
+ <p class="lede">Send us your architect's plans. We read every sheet, check every number against your drawings, and hand back a 3D home you can walk through, restyle and repaint, with a progress page that shows each step as it happens.</p>
+ <div class="cta-row"><a class="btn primary" href="#buy">Start your house · from $495</a><a class="btn ghost" href="./demo/">Try the sample tour →</a></div>
+ <p class="micro">Priced per house · No subscription · Every dimension traced to your drawings</p>
 
  <div class="ba" id="ba" style="--x:50%">
   <img src="./assets/layers/base.jpg" alt="The house as drawn" id="ba-before">
@@ -122,23 +132,23 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
   <div><b>Born in a real remodel</b><span>Developed alongside a 3,300 sq ft renovation</span></div>
   <div><b>Every dimension cited</b><span>Each number traces to a sheet and page</span></div>
   <div><b>Red-teamed first</b><span>Checked against the drawings before you see it</span></div>
-  <div><b>Your AI, your files</b><span>Runs with Claude or Codex on your computer</span></div>
+  <div><b>Watch it being built</b><span>A progress page asks only what your drawings can't answer</span></div>
  </div>
 </div></header>
 
 <section id="how"><div class="wrap">
- <h2>How it works</h2><p class="sub">Three steps. The first build takes a while, because it reads your plans the way a careful drafter would.</p>
+ <h2>How it works</h2><p class="sub">Three steps. We read your plans the way a careful drafter would before we build anything.</p>
  <div class="steps">
-  <div class="step"><div class="n">1</div><h3>Add your plans</h3><p>Unzip the kit and drop your drawings into one folder. Best: the CAD file (DWG) plus the PDF set it was printed to. Floor plans, elevations, sections, schedules. Photos and surveys help too.</p></div>
-  <div class="step"><div class="n">2</div><h3>Your assistant builds it</h3><p>Open the folder in Claude or Codex and paste one prompt. It reads every page, transcribes every dimension, builds the model and checks its own work.</p></div>
-  <div class="step"><div class="n">3</div><h3>Explore, redesign, ask</h3><p>Walk through in 3D, flip day and night, add design layers, and request studies. Share the tour as a single file.</p></div>
+  <div class="step"><div class="n">1</div><h3>Send your plans</h3><p>Your architect's PDF set is enough: floor plans, elevations, sections and schedules. The CAD file (DWG), photos or a survey make it even more exact, but they are optional.</p></div>
+  <div class="step"><div class="n">2</div><h3>We read, check, then build</h3><p>Every sheet is read and every fact written down with the sheet it came from. A second, independent reader checks that reading against your drawings, and the model has to pass its checks before you see it. Questions come to you only when your drawings can't answer them.</p></div>
+  <div class="step"><div class="n">3</div><h3>Explore, restyle, share</h3><p>Walk through in 3D, open each floor like a dollhouse, try design styles, and choose floors and colors room by room. Share a private link with your architect, contractor or family.</p></div>
  </div>
 </div></section>
 
 <section id="styles"><div class="wrap">
- <h2>Any style. Any era. Your floor plan.</h2><p class="sub">Photo-redesign apps repaint a picture of one room. Design layers restyle your actual house, room by room, and you can switch between them in a click.</p>
+ <h2>Any style. Any era. Your floor plan.</h2><p class="sub">Photo-redesign apps repaint a picture of one room. What ifs? restyle your actual house, room by room: another era, a room used differently, an addition. Switch between them in a click.</p>
  <div class="styles"><figure class="style"><img src="./assets/layers/color-plaster.jpg" alt="Bold color and plaster layer" loading="lazy"><figcaption><b>Bold color and plaster</b>Pink and ochre walls, courtyard light</figcaption></figure><figure class="style"><img src="./assets/layers/quiet-concrete.jpg" alt="Quiet concrete layer" loading="lazy"><figcaption><b>Quiet concrete</b>Smooth walls, framed daylight</figcaption></figure><figure class="style"><img src="./assets/layers/warm-modernist.jpg" alt="Warm modernist layer" loading="lazy"><figcaption><b>Warm modernist</b>Open rooms, handmade pieces</figcaption></figure><figure class="style"><img src="./assets/layers/collected-luxe.jpg" alt="Collected and layered layer" loading="lazy"><figcaption><b>Collected and layered</b>Stone, brass, statement pieces</figcaption></figure><figure class="style"><img src="./assets/layers/soft-curves.jpg" alt="Soft color and curves layer" loading="lazy"><figcaption><b>Soft color and curves</b>Rounded seats, candy tones</figcaption></figure><figure class="style"><img src="./assets/layers/coastal-timber.jpg" alt="Coastal timber layer" loading="lazy"><figcaption><b>Coastal timber</b>Redwood, big windows, 1960s coast</figcaption></figure><figure class="style"><img src="./assets/layers/dark-luxe.jpg" alt="Dark and luxurious layer" loading="lazy"><figcaption><b>Dark and luxurious</b>Bronze, lacquer, gallery walls</figcaption></figure>
-  <div class="style any"><div><b>＋ Your idea</b><br><span>"1970s desert modern", "warm minimal with lots of storage", "a coastal cabin feel". Type it; your assistant builds the layer.</span></div></div>
+  <div class="style any"><div><b>＋ Your idea</b><br><span>"1970s desert modern", "warm minimal with lots of storage", "a coastal cabin feel". Tell us; we build it as a layer (Signature).</span></div></div>
  </div>
  <p class="note">Illustrative styles made by an AI assistant, described by look rather than named after anyone. Not affiliated with or endorsed by any designer.</p>
 </div></section>
@@ -148,7 +158,7 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
  <div class="steps">
   <div class="step"><h3>Every surface, your colors</h3><p>Stucco, roof, and each room's floors, walls and cabinets. Tap a room, pick a swatch or any custom color, and save schemes to compare. Share the exact look as one file.</p>
    <div class="swdemo"><i style="background:#f2efe8"></i><i style="background:#d9c9ab"></i><i style="background:#a9b39c"></i><i style="background:#4a4f53"></i><i style="background:#b8704f"></i><i style="background:#b98a55"></i><i style="background:#6b4a33"></i><i style="background:#c7d3dc"></i></div></div>
-  <div class="step"><h3>Imagine the next version</h3><p>An addition off the back, a second story, an ADU over the garage, the kitchen opened to the living room. Describe it and your assistant models it as a layer you can flip against the house as drawn.</p></div>
+  <div class="step"><h3>Imagine the next version</h3><p>An addition off the back, a second story, an ADU over the garage, the kitchen opened to the living room. Describe it and we model it as a layer you can flip against the house as drawn.</p></div>
   <div class="step"><h3>Decide with the whole picture</h3><p>Walk through each option at eye level, day and night, then ask for a study: will the new room get enough light, does the island still clear, what does it change?</p></div>
  </div>
 </div></section>
@@ -167,55 +177,45 @@ footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0 50px;colo
 
 <section id="exact"><div class="wrap exact">
  <div>
-  <h2>Measured, not guessed.</h2><p class="sub" style="margin-bottom:22px">A pretty model with invented dimensions is worse than none. The kit makes the assistant prove every number, and the build refuses work that doesn't add up.</p>
+  <h2>Measured, not guessed.</h2><p class="sub" style="margin-bottom:22px">A pretty model with invented dimensions is worse than none. We prove every number, and the build refuses work that doesn't add up.</p>
   <ul>
    <li><i>1</i><div><b>Every page, in order</b><span>Each sheet is inventoried, rendered and marked used or not relevant before any modeling starts.</span></div></li>
    <li><i>2</i><div><b>Written exactly as printed</b><span>Dimensions go into a ledger as they appear on the sheet, like 8'-3½", with the page and close-up they came from.</span></div></li>
    <li><i>3</i><div><b>Strings must add up</b><span>Room dimensions have to sum to the printed overall, or the build stops.</span></div></li>
-   <li><i>4</i><div><b>A blind red team</b><span>A second pass re-reads a random sample from the drawings without seeing the answers. The tour says Draft until it passes.</span></div></li>
+   <li><i>4</i><div><b>An independent second reader</b><span>A second reader checks our reading against your sheets and every finding is fixed or answered. You see each fix on your progress page.</span></div></li>
+   <li><i>5</i><div><b>Checks before you see it</b><span>Rooms by name, door and window counts, nothing floating, no gaps between floors, the ground never through a patio. The tour says Draft until they pass.</span></div></li>
   </ul>
  </div>
  <div class="tile"><img src="./assets/exact-tile.jpg" alt="A close-up of a floor plan with dimension strings"><div class="lbl">8'-3½" + 9'-10" = 18'-1½"  ✓ adds up</div></div>
 </div></section>
 
 <section id="studies"><div class="wrap">
- <h2>Ask your house anything.</h2><p class="sub">Point at a room and request a study. Your assistant asks a few questions first, then researches your documents and the web and writes a report with its sources. These are real ones, with identifying details removed.</p>
+ <h2>Ask your house anything.</h2><p class="sub">Point at a room and request a study. We ask a few questions first, then researches your documents and the web and writes a report with its sources. These are real ones, with identifying details removed.</p>
  <div class="studies"><a class="study" href="./samples/sample_lighting_study.pdf" target="_blank" rel="noopener"><img src="./assets/samples/sample-lighting.png" alt="" loading="lazy"><div><span>lighting</span><b>Lighting throughout the house</b></div></a><a class="study" href="./samples/sample_first_floor_lighting_calculation.pdf" target="_blank" rel="noopener"><img src="./assets/samples/sample-first-floor-lighting.png" alt="" loading="lazy"><div><span>lighting</span><b>First-floor lighting calculation</b></div></a><a class="study" href="./samples/sample_bedroom_lighting_concepts.pdf" target="_blank" rel="noopener"><img src="./assets/samples/sample-bedroom-lighting.png" alt="" loading="lazy"><div><span>lighting</span><b>Bedroom lighting concepts</b></div></a><a class="study" href="./samples/sample_kitchen_island_fit.pdf" target="_blank" rel="noopener"><img src="./assets/samples/sample-island-fit.png" alt="" loading="lazy"><div><span>design</span><b>Kitchen island fit</b></div></a><a class="study" href="./samples/sample_deck_study.pdf" target="_blank" rel="noopener"><img src="./assets/samples/sample-deck.png" alt="" loading="lazy"><div><span>design</span><b>Three deck layouts</b></div></a></div>
 </div></section>
 
 <section id="buy"><div class="wrap center">
- <h2>One price. Yours to keep.</h2><p class="sub">No subscription, no account, no upload. You bring the plans and your own Claude or Codex.</p>
- <div class="price">
-  <div class="amt">$19<small>one-time</small></div>
-  <ul>
-   <li>The 3D viewer: dollhouse, walk-through, plan view, day and night</li>
-   <li>The model builder with measurement checks and red-team step</li>
-   <li>Design Inspo layers: styles, additions and new layouts</li>
-   <li>Paint: outside, roof, and every room's floors, walls and cabinets</li>
-   <li>Study requests and report templates</li>
-   <li>Five sample studies from a real remodel</li>
-   <li>A shareable single-file tour for your architect, contractor or family</li>
-  </ul>
-  <form onsubmit="return false"><button class="btn primary" type="button" disabled style="opacity:.6;cursor:default">Checkout opens soon · $19</button></form>
-  <p class="fine">Preview. Checkout is not open yet.</p>
- </div>
+ <h2>Priced per house.</h2><p class="sub">No subscription. Pay once for your house; the tour is yours to keep and share.</p>
+ <div class="tiers"><div class="tier"><h3>Tour</h3><div class="amt">$495<small>per house</small></div><ul><li>Your plans read and checked, every sheet</li><li>A walkable 3D tour: dollhouse, floors, eye level, day and night</li><li>A progress page with every check and fix</li><li>1 round of revisions</li></ul><button class="btn ghost" type="button" disabled style="opacity:.6;cursor:default">Opens soon</button></div><div class="tier pop"><span class=badge>Most popular</span><h3>Studio</h3><div class="amt">$1,250<small>per house</small></div><ul><li>Everything in Tour</li><li>Design styles on your house (Victorian, art deco, cabin and more)</li><li>Floors as wood, tile or carpet and colors, room by room</li><li>Rooms programmed for how you'll live (office, game room, media room)</li><li>2 rounds of revisions</li></ul><button class="btn primary" type="button" disabled style="opacity:.6;cursor:default">Opens soon</button></div><div class="tier"><h3>Signature</h3><div class="amt">$2,500+<small>per house</small></div><ul><li>Everything in Studio</li><li>A style made for you, from your own inspiration</li><li>Photoreal renders of the views you choose</li><li>A walkthrough video</li><li>Priority turnaround</li></ul><button class="btn ghost" type="button" disabled style="opacity:.6;cursor:default">Talk to us · opens soon</button></div></div>
+ <p class="fine">Architects, designers and builders: per-project pricing for your clients, under your name. talk to us (opens soon).</p>
+ <p class="fine">Preview: checkout is not open yet. A visualization and planning tool, not a construction document; your architect's drawings govern.</p>
 </div></section>
 
 <section id="faq"><div class="wrap">
  <h2 class="center">Questions</h2><p class="sub center" style="margin-bottom:26px">&nbsp;</p>
  <div class="faq">
-  <details><summary>What do I need?</summary><p>Your architectural plans as PDFs, a Mac or PC, and a Claude or Codex subscription. The assistant does the reading, building and research. Viewing a finished tour needs only a web browser.</p></details>
-  <details><summary>How long does the first build take?</summary><p>Expect 40 minutes or more, in 3 or more passes; a large PDF set can take a few hours. Each pass fills in more of the house, and a progress page grades every area so you always know what's done and what's still coming. You'll likely get a few clarifying questions along the way, only for things your drawings can't answer, and the build keeps going while you answer. After that, changes and new layers are quick.</p></details>
-  <details><summary>Where do my documents go?</summary><p>Nowhere. Plans, photos, insurance papers and surveys stay in the folder on your computer. This site never sees them, and the tour works offline.</p></details>
+  <details><summary>What do I need?</summary><p>Your architect's plan set as a PDF. CAD files, photos or a survey help but are optional. Viewing your tour needs only a web browser, on a computer or a phone.</p></details>
+  <details><summary>How long does it take?</summary><p>Usually within two business days for a standard home. The build itself is quick; the time goes into reading every schedule, elevation and section first and checking that reading, so the model matches your architect's design instead of needing rounds of fixes. Larger or unusual homes take longer. Your progress page shows each step as it happens, and asks a question only when your drawings can't answer it.</p></details>
+  <details><summary>Who sees my plans?</summary><p>Only the people building your model. Your plans are used for your house and nothing else, and your tour and progress page are private links that you choose whether to share.</p></details>
   <details><summary>How accurate is it?</summary><p>As accurate as your drawings. Every dimension must trace to a printed number, and anything that doesn't is labeled as assumed. It is a visualization and planning tool, not a construction document; your architect's drawings still govern.</p></details>
-  <details><summary>Can I change the layout or add on?</summary><p>Yes. Describe the change (an addition, a moved wall, a second story) and your assistant builds it as a design layer, so you can switch between it and the house as drawn. You don't drag walls in the browser; the assistant models the change and checks it.</p></details>
+  <details><summary>Can I change the layout or add on?</summary><p>Yes. Describe the change (an addition, a moved wall, a second story) and we model it as a design layer, so you can switch between it and the house as drawn. Revisions are included in each tier.</p></details>
   <details><summary>Are the studies professional advice?</summary><p>No. They are researched, cited write-ups to help you think and ask better questions of your architect, engineer or contractor.</p></details>
   <details><summary>What if my plans are scans?</summary><p>That works. Scanned and CAD-drawn sheets are read from sharp close-ups, and each number is tied to the image it came from so you can check it.</p></details>
  </div>
 </div></section>
 
-<div class="final"><div class="wrap"><h2>See your house before it's built.</h2><p class="sub center">Start with the sample tour, or get the kit and build yours.</p>
- <div class="cta-row"><a class="btn primary" href="#buy">Get it for $19</a><a class="btn ghost" href="./demo/">Try the sample tour →</a></div></div></div>
+<div class="final"><div class="wrap"><h2>See your house before it's built.</h2><p class="sub center">Start with the sample tour, or send us your plans.</p>
+ <div class="cta-row"><a class="btn primary" href="#buy">Start your house · from $495</a><a class="btn ghost" href="./demo/">Try the sample tour →</a></div></div></div>
 
 <footer><div class="wrap"><span>© Casa Study</span><span>Studies are information, not professional engineering, legal or financial advice.</span></div></footer>
 <script>
