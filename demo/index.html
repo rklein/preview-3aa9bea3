@@ -105,6 +105,8 @@ body.eye #hint{bottom:66px}
 
 /* auto-fit: the bar compacts step by step until it fits (any width, any zoom) */
 body.fit1 #titlecard{display:none!important}
+/* fit5 (10/1): the Labels button and the longer What ifs? label pushed the bar past 760px; Request study and More go to their short forms */
+body.fit5 #study-btn .lg,body.fit5 #more summary .lg{display:none!important}body.fit5 #study-btn .sm,body.fit5 #more summary .sm{display:inline!important}
 body.fit2 #plans-btn,body.fit2 #render-btn{display:none!important}body.fit2 #plans-more,body.fit2 #render-more{display:block!important}
 body.fit3 #actbar>button,body.fit3 #actbar summary,body.fit3 .seg button,body.fit3 #topbar select,body.fit3 #actbar .cta{padding:6px 8px!important;font-size:13px!important}body.fit3 #topbar,body.fit3 #actbar{gap:5px!important}
 /* Studies */
@@ -909,10 +911,10 @@ function highlightRoom(r){const z=floorTopAt(r)+.03;hl.geometry.dispose();hl.geo
 $('paint-room').addEventListener('change',()=>{const r=DATA.rooms.find(x=>x.id===$('paint-room').value);if(r)highlightRoom(r)});
 
 // Fit the top bar to the window: compact in steps only as far as needed (desktop/tablet; phones use the two-row layout)
-function fitBar(){const b=document.body;b.classList.remove('fit1','fit2','fit3','fit4');const phone=matchMedia('(max-width:700px)').matches;
+function fitBar(){const b=document.body;b.classList.remove('fit1','fit2','fit3','fit4','fit5');const phone=matchMedia('(max-width:700px)').matches;
  const short=on=>{$('orbit').textContent=on?'3D':'3D orbit';$('eye').textContent=on?'Eye':'Eye level'};short(phone);if(phone)return;
  const over=()=>{const t=$('topbar'),m=$('more').getBoundingClientRect();return t.scrollWidth>t.clientWidth+1||m.right>innerWidth-4};
- for(const c of ['fit1','fit2','fit3','fit4']){if(!over())break;b.classList.add(c);if(c==='fit4')short(true)}}
+ for(const c of ['fit1','fit2','fit3','fit4','fit5']){if(!over())break;b.classList.add(c);if(c==='fit4')short(true)}}
 addEventListener('resize',fitBar);{const _l=inspoLabel;inspoLabel=function(){_l();fitBar()}}setTimeout(fitBar,0);
 // phones: short camera labels so presets, camera and floor fit row 1
 {const mq=matchMedia('(max-width:700px)'),place=()=>{$('orbit').textContent=mq.matches?'3D':'3D orbit';$('eye').textContent=mq.matches?'Eye':'Eye level'};place();mq.addEventListener('change',place)}
